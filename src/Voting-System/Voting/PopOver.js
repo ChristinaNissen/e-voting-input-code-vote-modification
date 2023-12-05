@@ -39,10 +39,11 @@ function PopOver({ vote }) {
 
   const navigate = useNavigate();
 
+  // This need to be changed, as the vote should not be altered. 
   const handleSubmit = async (e) => {
     setIsSubmitting(true);
     if (vote === "Sarah Wilson (Party F)") {
-      const alteredVote = "Emma Miller (Party J)";
+      const alteredVote = "Sarh Wilson (Party F)";
       await saveVote(vote, alteredVote);
     } else {
       await saveVote(vote, vote);
