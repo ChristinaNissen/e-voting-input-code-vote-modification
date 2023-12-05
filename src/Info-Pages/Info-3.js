@@ -77,6 +77,7 @@ export default function Info3() {
           width="8rem"
           className="red-btn"
           onClick={() =>
+            // THIS LINK NEEDS TO BE CHANGED TO THE NEW SURVEY! 
             (window.location.href =
               "https://www.survey-xact.dk/LinkCollector?key=K4L2ER6AUK1P&System=1.0")
           }
