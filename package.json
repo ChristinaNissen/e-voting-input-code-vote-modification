@@ -4,16 +4,16 @@
     "private": true,
     "dependencies": {
         "@chakra-ui/icons": "^2.0.11",
-        "@chakra-ui/react": "^2.3.6",
-        "@emotion/react": "^11.10.5",
-        "@emotion/styled": "^11.10.5",
+        "@chakra-ui/react": "^2.8.2",
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
         "@parse/react": "^0.0.1-alpha.18",
         "@react-pdf/renderer": "^3.1.7",
         "@testing-library/jest-dom": "^5.16.5",
         "@testing-library/react": "^13.4.0",
         "@testing-library/user-event": "^13.5.0",
         "formik": "^2.2.9",
-        "framer-motion": "^7.6.2",
+        "framer-motion": "^7.10.3",
         "gh-pages": "^4.0.0",
         "parse": "^3.4.4",
         "qrcode.react": "^3.1.0",
@@ -38,10 +38,10 @@
         ]
     },
     "browserslist": [
-             ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+    ],
     "devDependencies": {
         "react-router-dom": "^6.4.3"
     },
