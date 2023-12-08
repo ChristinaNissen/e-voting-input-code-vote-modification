@@ -79,9 +79,8 @@ export default function Info3() {
           className="red-btn"
           color="white"
           onClick={() =>
-            // THIS LINK NEEDS TO BE CHANGED TO THE NEW SURVEY! 
             (window.location.href =
-              "https://www.survey-xact.dk/LinkCollector?key=K4L2ER6AUK1P&System=1.0")
+              "https://www.survey-xact.dk/LinkCollector?key=C7LXSJLQLP9J&System=1.0")
           }
         >
           Go to survey
