@@ -149,7 +149,7 @@ export default function Info1() {
                       Make sure that you can access the letter throughout the
                       study.
                     </Text>
-                    <Button onClick={downloadInstructions} className="red-btn">
+                    <Button onClick={downloadInstructions} className="red-btn" color="white">
                       <span className="material-symbols-outlined medium-icon margin-right-icon">
                         download
                       </span>
@@ -174,6 +174,7 @@ export default function Info1() {
                       className="red-btn"
                       isDisabled={disabledButton}
                       mt={"1rem"}
+                      color="white"
                     >
                       {isSubmitting && <Spinner size="sm" mr={"1rem"} />} Start
                     </Button>

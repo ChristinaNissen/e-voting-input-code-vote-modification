@@ -65,6 +65,7 @@ export default function Info3() {
           <InputRightElement width="4.5rem">
             <IconButton
               className="copy-button"
+              color="white"
               size="sm"
               onClick={copyIdToClipBoard}
               icon={<CopyIcon />}
@@ -76,6 +77,7 @@ export default function Info3() {
           marginTop={"2rem"}
           width="8rem"
           className="red-btn"
+          color="white"
           onClick={() =>
             // THIS LINK NEEDS TO BE CHANGED TO THE NEW SURVEY! 
             (window.location.href =

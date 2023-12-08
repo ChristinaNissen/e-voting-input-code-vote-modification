@@ -285,6 +285,7 @@ export default function Welcome() {
           className="red-btn"
           disabled={disabledButton}
           id="submit-button"
+          color="white"
         >
           {isSubmitting && <Spinner size="sm" mr={"1rem"} />}
           Start
