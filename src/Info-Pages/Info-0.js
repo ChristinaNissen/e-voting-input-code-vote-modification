@@ -250,25 +250,14 @@ export default function Welcome() {
             </Link>
             )
           </ListItem>
-          <ListItem>
-            Lara Elisabeth Fredrich (
-            <Link
-              className="info-link"
-              href="mailto:lfre@itu.dk"
-              target={"_blank"}
-            >
-              lfre@itu.dk
-            </Link>
-            )
-          </ListItem>
         </UnorderedList>
         <Text className="text-margin-top">
-          Student researchers at the IT University of Copenhagen
+          Researcher at the IT University of Copenhagen
         </Text>
         <h3 className="title-margin-top">Questions</h3>
         <Text>
           For any questions concerning our processing of your personal data,
-          please contact one of the students involved in the project (see
+          please contact the researcher involved in the project (see
           contact details above).
         </Text>
         <Checkbox
