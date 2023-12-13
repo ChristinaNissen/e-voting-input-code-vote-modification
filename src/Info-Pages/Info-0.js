@@ -10,7 +10,7 @@
  *
  * e-voting-system-self-replace is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
@@ -31,7 +31,6 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 import { getNumberOfVoters } from "../API/Voter";
-
 
 export default function Welcome() {
   const [checked, setChecked] = useState(false);
@@ -55,21 +54,23 @@ export default function Welcome() {
       .setAttribute("disabled", isSubmitting);
 
     const rndInt = Math.floor(Math.random() * 2) + 1;
-   /*  let count; */
+    /*  let count; */
 
     getNumberOfVoters().then((res) => {
       /* count = res; */
       if (rndInt === 1) {
-        // These links need to changed after deploying the application with Netlify. 
+        // These links need to changed after deploying the application with Netlify.
         //only redirect to first system if DB has less than 30 entries to get an equal amount of data for each system
         /*  if (count < 30) { */
-        window.location.href = "https://e-voting-system-1-study.netlify.app/start";
+        window.location.href =
+          "https://e-voting-system-1-study.netlify.app/start";
         /*  } else {
           window.location.href = "https://e-voting-study-2.netlify.app/info-1";
          }  */
       }
       if (rndInt === 2) {
-        window.location.href = "https://e-voting-system-1-study.netlify.app/start";
+        window.location.href =
+          "https://e-voting-system-1-study.netlify.app/start";
       }
     });
   };
@@ -90,7 +91,7 @@ export default function Welcome() {
           paper. This will be followed by a questionnaire, which you will get
           redirected to from the last page of the voting system. Once you have
           completed the questionnaire, you will be redirected to Prolific. The
-          total duration of the study is approximately 30 minutes. We highly
+          total duration of the study is approximately 20 minutes. We highly
           recommend using a desktop device for the study.
         </Text>
         <h3 className="title-margin-top">Withdrawal</h3>
@@ -117,7 +118,7 @@ export default function Welcome() {
         </Text>
         <h3 className="title-margin-top">Compensation</h3>
         <Text>
-          Each participant will receive 4.50 £ at the conclusion of the study
+          Each participant will receive 3 £ at the conclusion of the study
           through Prolific.
         </Text>
         <h3 className="title-margin-top">How we handle and delete the data</h3>
@@ -152,21 +153,17 @@ export default function Welcome() {
         </Text>
         <h3 className="title-margin-top">How we use the data</h3>
         <Text>
-          The data will be used to derive statistical measures of user
-          experience and trust in the presented e-voting system. The data might
-          be referenced, but not printed in full, in the research report which
-          will be published internally at ITU as a Master Thesis Report (meaning
-          that researchers and future students at ITU might have access to the
-          report). They might also be used in aggregated form in academic
-          publishing, meaning that no individual answers will be mentioned, but
-          only overall results will appear.
+          These data will be used to derive statistical measures of users'
+          attitudes towards internet voting systems. The data might be
+          referenced or quoted, but not printed in full unless it is completely
+          anonymized, in the published research reports and other academic
+          publications.
         </Text>
         <h3 className="title-margin-top">Who has access to the data?</h3>
         <Text>
           The researchers have access to the original data until it has been
-          edited to replace given personal information with placeholders to
-          anonymise it. The anonymised data will be made available to the
-          supervising researchers and the external censor assessing the project.
+          edited to replace given personal information with placeholders as to
+          anonymize it.
         </Text>
         <h3 className="title-margin-top">Third Parties</h3>
         <Text>
@@ -183,10 +180,10 @@ export default function Welcome() {
             policy for more information:{" "}
             <Link
               className="info-link"
-              href="https://www.surveyxact.com/product/data-security/"
+              href="https://rambollxact.com/cookie-and-privacy-policy"
               target={"_blank"}
             >
-              https://www.surveyxact.com/product/data-security/
+              https://rambollxact.com/cookie-and-privacy-policy
             </Link>
           </ListItem>
           <ListItem className="text-margin-top">
@@ -249,15 +246,26 @@ export default function Welcome() {
             </Link>
             )
           </ListItem>
+          <ListItem>
+            Oksana Kulyk (
+            <Link
+              className="info-link"
+              href="mailto:okku@itu.dk"
+              target={"_blank"}
+            >
+              okku@itu.dk
+            </Link>
+            )
+          </ListItem>
         </UnorderedList>
         <Text className="text-margin-top">
-          Researcher at the IT University of Copenhagen
+          Researchers at the IT University of Copenhagen
         </Text>
         <h3 className="title-margin-top">Questions</h3>
         <Text>
           For any questions concerning our processing of your personal data,
-          please contact the researcher involved in the project (see
-          contact details above).
+          please contact the researchers involved in the project (see contact
+          details above).
         </Text>
         <Checkbox
           className="check-box check-box-red"
