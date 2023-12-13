@@ -30,7 +30,7 @@ import {
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react";
-import { getNumberOfVoters } from "../API/Voter";
+/* import { getNumberOfVoters } from "../API/Voter"; */
 
 export default function Welcome() {
   const [checked, setChecked] = useState(false);
@@ -52,21 +52,9 @@ export default function Welcome() {
     document
       .querySelector("#submit-button")
       .setAttribute("disabled", isSubmitting);
-
-    /* const rndInt = Math.floor(Math.random() * 2) + 1; */
-      let count = 0;
-
-    getNumberOfVoters().then((res) => {
-      count = res;
-      if (count <= 30) {
-        window.location.href =
-          "https://e-voting-system-1-study.netlify.app/info-1";
-      }
-      else{
-        window.location.href =
-          "https://e-voting-system-2-study.netlify.app/info-1";
-      }
-    });
+      window.location.href =
+      "https://e-voting-system-1-study.netlify.app/info-1";
+     
   };
 
   return (
