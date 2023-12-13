@@ -31,14 +31,13 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 import { getNumberOfVoters } from "../API/Voter";
-import { useNavigate } from "react-router-dom";
+
 
 export default function Welcome() {
   const [checked, setChecked] = useState(false);
   const [disabledButton, setDisabled] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
-/*   const navigate = useNavigate();
- */
+
   function handleChangeCheckbox() {
     if (checked) {
       setChecked(false);

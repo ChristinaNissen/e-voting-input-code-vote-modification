@@ -26,7 +26,7 @@ import getCurrentUser from "../API/Voter";
 import "./InfoPages.css";
 
 export default function Info3() {
-  const voter = getCurrentUser();
+  /* const voter = getCurrentUser(); */
 
 /*   function copyIdToClipBoard() {
     navigator.clipboard.writeText(voter.attributes.username);
