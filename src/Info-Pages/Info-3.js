@@ -22,7 +22,6 @@ import {
   Button,
   Text,
 } from "@chakra-ui/react";
-import getCurrentUser from "../API/Voter";
 import "./InfoPages.css";
 
 export default function Info3() {
