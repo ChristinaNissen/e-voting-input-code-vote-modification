@@ -59,7 +59,7 @@ export default function Welcome() {
    /*  let count; */
 
     getNumberOfVoters().then((res) => {
-      count = res;
+      /* count = res; */
       if (rndInt === 1) {
         // These links need to changed after deploying the application with Netlify. 
         //only redirect to first system if DB has less than 30 entries to get an equal amount of data for each system
