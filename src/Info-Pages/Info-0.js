@@ -37,8 +37,8 @@ export default function Welcome() {
   const [checked, setChecked] = useState(false);
   const [disabledButton, setDisabled] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const navigate = useNavigate();
-
+/*   const navigate = useNavigate();
+ */
   function handleChangeCheckbox() {
     if (checked) {
       setChecked(false);
@@ -56,7 +56,7 @@ export default function Welcome() {
       .setAttribute("disabled", isSubmitting);
 
     const rndInt = Math.floor(Math.random() * 2) + 1;
-    let count;
+   /*  let count; */
 
     getNumberOfVoters().then((res) => {
       count = res;

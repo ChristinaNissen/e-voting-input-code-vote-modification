@@ -21,21 +21,16 @@ import React from "react";
 import {
   Button,
   Text,
-  Input,
-  InputGroup,
-  InputRightElement,
-  IconButton,
 } from "@chakra-ui/react";
 import getCurrentUser from "../API/Voter";
-import { CopyIcon } from "@chakra-ui/icons";
 import "./InfoPages.css";
 
 export default function Info3() {
   const voter = getCurrentUser();
 
-  function copyIdToClipBoard() {
+/*   function copyIdToClipBoard() {
     navigator.clipboard.writeText(voter.attributes.username);
-  }
+  } */
   return (
     <div className="container-info-pages">
       <div className="inner-box-info centered-info-page">
