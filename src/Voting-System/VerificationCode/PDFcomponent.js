@@ -128,10 +128,10 @@ export default function PDFcomponent({ dataURL, code }) {
         </View>
         <View style={styles.view}>
           <Text style={styles.title}>
-            Your Personal Vote Verification Code
+            Your Personal Vote Verification Codes
           </Text>
           <Text style={styles.text}>
-            Please use the code below to verify the correctness of your
+            Please use one of the codes below to verify the correctness of your
             vote. You will get notified as soon as the election results are
             available and you can verify your vote.{" "}
           </Text>
@@ -145,18 +145,31 @@ export default function PDFcomponent({ dataURL, code }) {
             verify their vote and report problems. It will take you less than
             two minutes and is completely anonymous.
           </Text>
+          <Text style={styles.text}>
+            You have two options to verify your vote:
+          </Text>
+        </View>
+        <View style={styles.imageViewRow}>
+          <View style={styles.view}>
+            <Text style={styles.subtTitle}>Option 1:</Text>
+            <Text style={styles.explanationText}>
+              You can scan the QR code and check if the displayed voting option
+              matches your selection.
+            </Text>
+          </View>
+
+          <Image src={dataURL} style={styles.QRImage} />
         </View>
         <View style={styles.imageViewColumn}>
-          <Text style={styles.subtTitle}>How do I verify?</Text>
+          <Text style={styles.subtTitle}>Option 2:</Text>
           <Text style={styles.text}>
-            Please go to this website:{" "}
+            Alternatively, you can go to this website:{" "}
           </Text>
-            <Link
-             /* OBS! These link needs to be changed after deployment! */
-            src="http://localhost:3000/verification"
+          <Link
+            src="https://e-voting-system-1-study.netlify.app/verification"
             style={styles.link}
           >
-            http://localhost:3000/verification
+            https://e-voting-study-1.netlify.app/verification
           </Link>{" "}
           <Text style={styles.text}>
             There you can search for your unique alphanumerical verification code:

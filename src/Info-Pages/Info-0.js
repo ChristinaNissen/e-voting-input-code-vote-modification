@@ -63,13 +63,13 @@ export default function Welcome() {
         // These links need to changed after deploying the application with Netlify. 
         //only redirect to first system if DB has less than 30 entries to get an equal amount of data for each system
         /*  if (count < 30) { */
-        window.location.href = "https://e-voting-study-1.netlify.app/info-1";
+        window.location.href = "https://e-voting-system-1-study.netlify.app/start";
         /*  } else {
           window.location.href = "https://e-voting-study-2.netlify.app/info-1";
          }  */
       }
       if (rndInt === 2) {
-        window.location.href = "https://e-voting-study-2.netlify.app/info-1";
+        window.location.href = "https://e-voting-system-1-study.netlify.app/start";
       }
     });
   };
