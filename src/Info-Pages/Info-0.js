@@ -53,24 +53,18 @@ export default function Welcome() {
       .querySelector("#submit-button")
       .setAttribute("disabled", isSubmitting);
 
-    const rndInt = Math.floor(Math.random() * 2) + 1;
-    /*  let count; */
+    /* const rndInt = Math.floor(Math.random() * 2) + 1; */
+      let count = 0;
 
     getNumberOfVoters().then((res) => {
-      /* count = res; */
-      if (rndInt === 1) {
-        // These links need to changed after deploying the application with Netlify.
-        //only redirect to first system if DB has less than 30 entries to get an equal amount of data for each system
-        /*  if (count < 30) { */
+      count = res;
+      if (count <= 30) {
         window.location.href =
           "https://e-voting-system-1-study.netlify.app/info-1";
-        /*  } else {
-          window.location.href = "https://e-voting-study-2.netlify.app/info-1";
-         }  */
       }
-      if (rndInt === 2) {
+      else{
         window.location.href =
-          "https://e-voting-system-1-study.netlify.app/info-1";
+          "https://e-voting-system-2-study.netlify.app/info-1";
       }
     });
   };
