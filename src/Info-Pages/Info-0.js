@@ -52,9 +52,16 @@ export default function Welcome() {
     document
       .querySelector("#submit-button")
       .setAttribute("disabled", isSubmitting);
-      window.location.href =
-      "https://e-voting-system-1-study.netlify.app/info-1";
-     
+      const totalParticipants = 200;
+      const participantsIndex = Math.floor(Math.random() * totalParticipants);
+        if (participantsIndex < totalParticipants / 2) {
+          window.location.href =
+          "https://e-voting-system-1-study.netlify.app/info-1";
+        }
+        else{
+          window.location.href =
+          "https://e-voting-system-2-study.netlify.app/info-1";
+        }
   };
 
   return (
