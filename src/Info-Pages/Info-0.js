@@ -114,7 +114,7 @@ export default function Welcome() {
         <Text>
           If a participant discloses any personal information about themselves
           or other people in the voting system or when answering the
-          questionnaire, the researchers will remove this from the dataset and
+          questionnaire that could lead to identification, the researchers will remove this from the dataset and
           replace it with a placeholder.{" "}
           {/* The non-anonymised data set will be
           deleted after the study has been completed (latest 31st of December
