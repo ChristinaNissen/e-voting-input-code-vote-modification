@@ -49,20 +49,22 @@ export default function Welcome() {
 
   const assignARandomRepository = () => {
     setIsSubmitting(true);
-    document
-      .querySelector("#submit-button")
-      .setAttribute("disabled", isSubmitting);
-      const totalParticipants = 200;
-      const participantsIndex = Math.floor(Math.random() * totalParticipants);
-        if (participantsIndex < totalParticipants / 2) {
-          window.location.href =
-          "https://e-voting-system-1-study.netlify.app/info-1";
-        }
-        else{
-          window.location.href =
-          "https://e-voting-system-2-study.netlify.app/info-1";
-        }
+    document.querySelector("#submit-button").setAttribute("disabled", isSubmitting);
+  
+    const totalParticipants = 200;
+    const participantsIndex = Math.floor(Math.random() * totalParticipants);
+  
+    const segmentSize = totalParticipants / 3;
+  
+    if (participantsIndex < segmentSize) {
+      window.location.href = "https://e-voting-system-1-study.netlify.app/info-1";
+    } else if (participantsIndex < segmentSize * 2) {
+      window.location.href = "https://e-voting-system-2-study.netlify.app/info-1";
+    } else {
+      window.location.href = "https://e-voting-system-2-1-study.netlify.app/info-1";
+    }
   };
+  
 
   return (
     <div className="container-info-pages">
