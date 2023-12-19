@@ -71,23 +71,27 @@ export default function VoteVerification() {
   
 
   const makeAccordion = () => {
-    let firstLetter = results[0].code[0].toUpperCase();
     let accordion = [];
-    let accordionSection = { letter: firstLetter, results: [results[0]] };
-    let length = results.length - 1;
-    for (let i = 1; i < length; i++) {
-      if (results[i].code[0].toUpperCase() === firstLetter) {
-        accordionSection.results.push(results[i]);
+    if (results.length > 0) {
+      let firstLetter = results[0].code ? results[0].code[0].toUpperCase() : '';
+      let accordionSection = { letter: firstLetter, results: [results[0]] };
+      let length = results.length;
+  
+      for (let i = 1; i < length; i++) {
+        if (results[i].code && results[i].code[0].toUpperCase() === firstLetter) {
+          accordionSection.results.push(results[i]);
+        }
+        if (!results[i].code || results[i].code[0].toUpperCase() !== firstLetter) {
+          accordion.push(accordionSection);
+          firstLetter = results[i].code ? results[i].code[0].toUpperCase() : '';
+          accordionSection = { letter: firstLetter, results: [results[i]] };
+        }
       }
-      if (results[i].code[0].toUpperCase() !== firstLetter) {
-        accordion.push(accordionSection);
-        firstLetter = results[i].code[0].toUpperCase();
-        accordionSection = { letter: firstLetter, results: [results[i]] };
-      }
+      accordion.push(accordionSection);
     }
-    accordion.push(accordionSection);
     return accordion;
   };
+  
 
   const handleInputChange = (e) => {
     setInput(e.target.value);
