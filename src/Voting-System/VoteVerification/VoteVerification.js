@@ -59,15 +59,16 @@ export default function VoteVerification() {
 
   results = Array.from(results);
   results.sort((a, b) => {
-    const codeA = a.code ? a.code.toUpperCase() : ''; // Check if code exists
-    const codeB = b.code ? b.code.toUpperCase() : ''; // Check if code exists
-  
+    const codeA = a.code ? a.code.toString().toUpperCase() : ''; // Ensure 'code' is a string
+    const codeB = b.code ? b.code.toString().toUpperCase() : ''; // Ensure 'code' is a string
+    
     if (codeA < codeB) {
       return -1;
     } else {
       return 1;
     }
   });
+  
 
   const makeAccordion = () => {
     let firstLetter = results[0].code[0].toUpperCase();
