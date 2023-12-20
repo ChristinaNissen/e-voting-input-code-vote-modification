@@ -39,7 +39,7 @@ const navigate = useNavigate();
           However, since this is a study, the results are already up. {/* Please
           follow the instruction letter to verify your vote now! */}
         </Text>
-        <Button onClick={()=>navigate("/verification")} className="red-btn">Next</Button>
+        <Button textColor="white" onClick={()=>navigate("/verification")} className="red-btn">Next</Button>
       </div>
     </div>
   );

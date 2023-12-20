@@ -64,6 +64,7 @@ export default function Info3() {
           />
           <InputRightElement width="4.5rem">
             <IconButton
+              color="white"
               className="copy-button"
               size="sm"
               onClick={copyIdToClipBoard}
@@ -73,6 +74,7 @@ export default function Info3() {
         </InputGroup>
 
         <Button
+          textColor="white"
           marginTop={"2rem"}
           width="8rem"
           className="red-btn"
