@@ -62,6 +62,7 @@ export async function saveReportOfProblem(problem) {
   } catch (error) {
     console.log("Error saving report of problem: " + error);
   }
+}
 
 export async function getNumberOfVoters(){
   const query = new Parse.Query('User');
