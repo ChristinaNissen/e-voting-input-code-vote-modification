@@ -32,13 +32,18 @@ import Navbar from "../Navbar/Navbar";
 import { ReportingConfirmation } from "./ReportingConformation";
 import { useState } from "react";
 import "./Reporting.css";
+import getCurrentUser from "../../API/Voter";
 
 export default function Reporting() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const voter = getCurrentUser();
 
   const validateText = (value) => {
     if (value === "") {
       return "Input field cannot be empty";
+    }
+    if (voter === null){
+      return "You cannot report a problem because you have not clicked the 'Start' button on the webpage where you are supposed to download the instructions for the voting system."
     }
   };
 
